@@ -6,6 +6,7 @@ import ProductDetail from './page/ProductDetail';
 import Main from './page/Main';
 import NotFound from './page/NotFound';
 import Navebar from './component/Navebar';
+import { Reset } from 'styled-reset';
 
 //1. 전체 상품 페이지, 상품 상세페이지, 로그인 페이지
 //1.1 네비게이션바
@@ -20,6 +21,7 @@ import Navebar from './component/Navebar';
 function App() {
   return (
     <div>
+      <Reset />
       <Navebar />
       <Routes>
         <Route path="/" element={<Main />}></Route>

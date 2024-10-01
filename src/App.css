@@ -1,4 +1,125 @@
-.log-in {
+/* Navbar */
+.navebar {
+  padding: 16px 32px;
+  background-color: #faf9f8;
+  height: 164px;
+  box-sizing: border-box;
+}
+.navebar .first-row {
+  /* background-color: yellowgreen; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 67px;
+  /* background-color: aqua; */
+  margin-bottom: 32px;
+}
+.navebar .first-row .middle.logo {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* background-color: pink; */
+}
+.navebar .first-row .middle.logo img {
+  width: 60.65px;
+  height: 40px;
+}
+
+.navebar .first-row .right {
   display: flex;
   justify-content: end;
+  /* background-color: #656667; */
+}
+.navebar .first-row .right .log-in,
+.navebar .first-row .right .like {
+  display: flex;
+  margin: 0 7px;
+  align-items: center;
+  cursor: pointer;
+}
+.navebar .first-row .right .img-login,
+.navebar .first-row .right .img-heart {
+  font-size: 22px;
+  margin: 0 5px;
+  color: #656667;
+}
+.navebar .second-row {
+  display: flex;
+  justify-content: end;
+  /* background-color: yellowgreen; */
+}
+.navebar .second-row .to-right {
+  width: 1220px;
+  /* height: 33px; */
+  display: grid;
+  /* background-color: yellow; */
+  grid-template-columns: 4fr 1fr;
+  align-items: end;
+}
+.navebar .second-row .menu {
+  /* width: 1220px; */
+  /* height: 33px; */
+  display: flex;
+  justify-content: center;
+  /* background-color: pink; */
+}
+.navebar .second-row .menu li {
+  margin: 0 17px;
+  cursor: pointer;
+}
+.navebar .second-row .search {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navebar .second-row .search .icon-search {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 4px;
+  color: #656667;
+}
+.navebar .second-row .search input {
+  width: 150px;
+  padding: 8px 16px 8px 32px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #faf9f8;
+  outline: none;
+  font-size: 16px;
+}
+
+/* ProductAll */
+.product-all {
+  padding: 60px;
+}
+.product-all .margin-item {
+  margin-bottom: 30px;
+  /* background-color: pink; */
+}
+.product-all .margin-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* productcard */
+.productcard .new {
+  background-color: rgb(246, 255, 0);
+  color: black;
+  height: 16px;
+  width: 30px;
+  /* display: inline; */
+  /* font-size: 16px; */
+  animation: blink 1s step-end infinite; /* 1초 간격으로 무한 반복 */
+}
+@keyframes blink {
+  /* 0% {
+    opacity: 1;
+  } */
+  50% {
+    opacity: 0;
+  }
+  /* 100% {
+    opacity: 0;
+  } */
 }
