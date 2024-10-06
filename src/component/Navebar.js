@@ -23,6 +23,18 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
     navigate('/product');
     console.log('product clicked');
   };
+  const search = (event) => {
+    // console.log(event);
+    // event.key == 'Enter' ? console.log('enter') : console.log('노');
+    if (event.key == 'Enter') {
+      let target = event.target.value;
+      // url을 바꿔준다
+      navigate(`/product?q=${target}`);
+    }
+    // 입력한 검색어를 읽어와서(js에서는 value속성을 사용했지만 react에서는 event 속성 활용)
+
+    // console.log(target);
+  };
   return (
     <div className="navebar">
       <div className="first-row">
@@ -53,7 +65,11 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
           </ul>
           <div className="search">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="icon-search" />
-            <input placeholder="검색"></input>
+            {/* OnKeyPress가 더 이상 사용되지 않는다고 함*/}
+            <input
+              placeholder="검색"
+              onKeyDown={(event) => search(event)}
+            ></input>
           </div>
         </div>
       </div>
