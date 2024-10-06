@@ -15,7 +15,7 @@
       "title": "슬림핏 맘 하이웨이스트 앵클 진",
       "price": 29900,
       "choice": true,
-      "new": true,
+      "new": false,
       "size": ["S", "M", "L"]
     },
     {
@@ -33,7 +33,7 @@
       "title": "퍼프 슬리브 드레스",
       "price": 39900,
       "choice": false,
-      "new": true,
+      "new": false,
       "size": ["S", "M", "L"]
     },
     {
@@ -69,7 +69,7 @@
       "title": "오버사이즈 집업 후디",
       "price": 99900,
       "choice": false,
-      "new": true,
+      "new": false,
       "size": ["S", "M", "L"]
     },
     {
@@ -77,8 +77,8 @@
       "img": "https://noona-hnm.netlify.app/track-jacket.jpeg",
       "title": "아플리케 트랙 재킷",
       "price": 14900,
-      "choice": true,
-      "new": true,
+      "choice": false,
+      "new": false,
       "size": ["S", "M", "L"]
     },
     {

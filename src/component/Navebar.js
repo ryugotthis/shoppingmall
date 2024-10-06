@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
-const Navebar = () => {
+import { useNavigate } from 'react-router-dom';
+const Navebar = ({ authenticate, setAuthenticate }) => {
   const menuList = [
     'Women',
     'Men',
@@ -14,6 +14,15 @@ const Navebar = () => {
     'Sale',
     '지속가능성',
   ];
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
+    setAuthenticate(false);
+  };
+  const goToProduct = () => {
+    navigate('/product');
+    console.log('product clicked');
+  };
   return (
     <div className="navebar">
       <div className="first-row">
@@ -25,9 +34,9 @@ const Navebar = () => {
           ></img>
         </div>
         <div className="right">
-          <div className="log-in">
+          <div className="log-in" onClick={goToLogin}>
             <FontAwesomeIcon icon={faUser} className="img-login" />
-            <div>로그인</div>
+            <div>{authenticate ? '로그아웃' : '로그인'}</div>
           </div>
           <div className="like">
             <FontAwesomeIcon icon={faHeart} className="img-heart" />
@@ -39,7 +48,7 @@ const Navebar = () => {
         <div className="to-right">
           <ul className="menu">
             {menuList.map((menu) => (
-              <li>{menu}</li>
+              <li onClick={goToProduct}>{menu}</li>
             ))}
           </ul>
           <div className="search">
