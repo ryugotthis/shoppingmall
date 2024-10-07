@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Login from './page/Login';
 import ProductAll from './page/ProductAll';
-import ProductDetail from './page/ProductDetail';
+// import ProductDetail from './page/ProductDetail';
 import Main from './page/Main';
 import NotFound from './page/NotFound';
 import Navebar from './component/Navebar';

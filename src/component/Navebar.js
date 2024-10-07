@@ -26,7 +26,7 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
   const search = (event) => {
     // console.log(event);
     // event.key == 'Enter' ? console.log('enter') : console.log('노');
-    if (event.key == 'Enter') {
+    if (event.key === 'Enter') {
       let target = event.target.value;
       // url을 바꿔준다
       navigate(`/product?q=${target}`);

@@ -8,7 +8,12 @@ const ProductCard = ({ item, key }) => {
   };
   return (
     <div className="productcard" onClick={showDetail}>
-      <img src={item?.img} width="inherit" className="img-fluid" />
+      <img
+        src={item?.img}
+        width="inherit"
+        className="img-fluid"
+        alt="card-img"
+      />
       <div>{item ? item.new ? <p className="new">new</p> : '' : ''}</div>
       <div>{item ? (item.choice ? 'conscious choice' : '') : ''}</div>
       <div>{item?.title}</div>
