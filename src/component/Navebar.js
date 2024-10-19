@@ -40,10 +40,7 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
       <div className="first-row">
         <div className="left"></div>
         <div className="middle logo">
-          <img
-            src="https://cdn.cookielaw.org/logos/6e0ffeab-df84-4fee-b293-9e6498bfa887/697b276d-c669-4d88-b115-dd9e6cae3fae/28a9d5ed-4776-4fe0-9e19-007e8ed817a9/709px-H&M-Logo.svg.png"
-            alt="로고"
-          ></img>
+          <img src="./imgs/logo1.png" alt="로고" />
         </div>
         <div className="right">
           <div className="log-in" onClick={goToLogin}>
