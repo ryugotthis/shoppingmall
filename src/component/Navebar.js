@@ -3,26 +3,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-const Navebar = ({ authenticate, setAuthenticate }) => {
+import logo from './logo1.png';
+import logo1 from '../imgs/logo2.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { authenticateAction } from '../redux/actions/authenticateAction';
+
+const Navebar = () => {
   const menuList = [
-    'Women',
-    'Men',
-    'Baby',
-    'Kids',
-    'H&M HOME',
+    'All',
+    'Outer',
+    'Top',
+    'dress',
+    'Pants',
     'Sport',
     'Sale',
     '지속가능성',
   ];
+  const authenticate = useSelector((state) => state.auth.authenticate);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const goToLogin = () => {
     navigate('/login');
-    setAuthenticate(false);
+    // setAuthenticate(false);
   };
-  const goToProduct = () => {
-    navigate('/product');
-    console.log('product clicked');
+  const goTOLogout = () => {
+    dispatch(authenticateAction.logout(authenticate));
   };
+  const goToProduct = (menu) => {
+    navigate(`/product?category=${menu.target.innerHTML}`);
+    // console.log(
+    //   'product clicked',
+    //   menu.target.__reactProps$z5lyzy2y8ym.children
+    // );
+    console.log('product clicked', menu.target.innerHTML);
+  };
+  // const goToHome = () => {
+  //   navigate('/');
+  // };
   const search = (event) => {
     // console.log(event);
     // event.key == 'Enter' ? console.log('enter') : console.log('노');
@@ -40,10 +57,13 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
       <div className="first-row">
         <div className="left"></div>
         <div className="middle logo">
-          <img src="./imgs/logo1.png" alt="로고" />
+          <img src={logo} alt="로고" onClick={() => navigate('/')} />
         </div>
         <div className="right">
-          <div className="log-in" onClick={goToLogin}>
+          <div
+            className="log-in"
+            onClick={authenticate ? goTOLogout : goToLogin}
+          >
             <FontAwesomeIcon icon={faUser} className="img-login" />
             <div>{authenticate ? '로그아웃' : '로그인'}</div>
           </div>
@@ -57,7 +77,7 @@ const Navebar = ({ authenticate, setAuthenticate }) => {
         <div className="to-right">
           <ul className="menu">
             {menuList.map((menu) => (
-              <li onClick={goToProduct}>{menu}</li>
+              <li onClick={(menu) => goToProduct(menu)}>{menu}</li>
             ))}
           </ul>
           <div className="search">

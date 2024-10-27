@@ -7,7 +7,8 @@
       "price": 99900,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Outer"
     },
     {
       "id": 1,
@@ -16,7 +17,8 @@
       "price": 29900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Pants"
     },
     {
       "id": 2,
@@ -25,7 +27,8 @@
       "price": 39900,
       "choice": false,
       "new": true,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Pants"
     },
     {
       "id": 3,
@@ -34,7 +37,8 @@
       "price": 39900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Dress"
     },
     {
       "id": 4,
@@ -43,7 +47,8 @@
       "price": 29900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Dress"
     },
     {
       "id": 5,
@@ -52,7 +57,8 @@
       "price": 39900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Dress"
     },
     {
       "id": 6,
@@ -61,7 +67,8 @@
       "price": 39900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Outer"
     },
     {
       "id": 7,
@@ -70,7 +77,8 @@
       "price": 99900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Top"
     },
     {
       "id": 8,
@@ -79,7 +87,8 @@
       "price": 14900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Outer"
     },
     {
       "id": 9,
@@ -88,7 +97,8 @@
       "price": 19900,
       "choice": false,
       "new": true,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Top"
     },
     {
       "id": 10,
@@ -97,7 +107,8 @@
       "price": 19900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Pants"
     },
     {
       "id": 11,
@@ -106,7 +117,8 @@
       "price": 29900,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Pants"
     },
     {
       "id": 12,
@@ -115,7 +127,8 @@
       "price": 14900,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Dress"
     },
     {
       "id": 13,
@@ -124,7 +137,8 @@
       "price": 29900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "size": ["S", "M", "L"],
+      "category": "Top"
     }
   ]
 }

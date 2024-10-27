@@ -7,8 +7,9 @@ import Main from './page/Main';
 import NotFound from './page/NotFound';
 import Navebar from './component/Navebar';
 import { Reset } from 'styled-reset';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import PrivateRoute from './PrivateRoute';
+import { useSelector } from 'react-redux';
 
 //1. 전체 상품 페이지, 상품 상세페이지, 로그인 페이지
 //1.1 네비게이션바
@@ -21,25 +22,20 @@ import PrivateRoute from './PrivateRoute';
 //8. 상품을 검색할 수 있다.
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false); // 로그인이 되면 true 아니면 false
-  useEffect(() => {
-    console.log('state보여줘!!', authenticate);
-  }, [authenticate]);
+  // const [authenticate, setAuthenticate] = useState(false); // 로그인이 되면 true 아니면 false
+
+  // useEffect(() => {
+  //   console.log('state보여줘!!', authenticate);
+  // }, [authenticate]);
   return (
     <div>
       <Reset />
-      <Navebar authenticate={authenticate} setAuthenticate={setAuthenticate} />
+      <Navebar />
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route
-          path="/login"
-          element={<Login setAuthenticate={setAuthenticate} />}
-        ></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/product" element={<ProductAll />}></Route>
-        <Route
-          path="/product/:id"
-          element={<PrivateRoute authenticate={authenticate} />}
-        ></Route>
+        <Route path="/product/item/:id" element={<PrivateRoute />}></Route>
         {/* 일치하는 라우트가 없는 경우 */}
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

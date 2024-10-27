@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { productAction } from '../redux/actions/productAction';
+
 const ProductDetail = () => {
   let { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const getProductDetail = async () => {
-    let url = ` https://my-json-server.typicode.com/ryugotthis/shoppingmall/products/${id}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-    setProduct(data);
+  let dispatch = useDispatch();
+  let product = useSelector((state) => state.product.productDetailList);
+  // const [product, setProduct] = useState(null);
+  const getProductDetail = () => {
+    dispatch(productAction.getProductDetail(id));
   };
   useEffect(() => {
     getProductDetail();
+    console.log('product', product);
   }, []);
-  console.log('사이즈정보', product?.size);
+  // console.log('사이즈정보', product?.size);
 
   return (
     <div className="product-detail">

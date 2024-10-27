@@ -1,14 +1,15 @@
 /* Navbar */
 body {
-  background-color: #ccd2d2;
-  background-color: black;
+  /* background-color: #ccd2d2; */
+  /* background-color: black; */
 }
 .product-all {
-  background-color: #ccd2d2;
+  /* background-color: #ccd2d2; */
 }
 .navebar {
   padding: 16px 32px;
   background-color: #ccd2d2;
+  background-color: #1d2d25;
   height: 164px;
   box-sizing: border-box;
 }
@@ -18,7 +19,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   height: 67px;
   /* background-color: aqua; */
-  margin-bottom: 32px;
+  margin: 10px 0 16px 0;
 }
 .navebar .first-row .middle.logo {
   display: flex;
@@ -27,8 +28,10 @@ body {
   /* background-color: pink; */
 }
 .navebar .first-row .middle.logo img {
-  width: 60.65px;
-  height: 40px;
+  width: 63px;
+  /* height: 50px; */
+  /* background-color: pink; */
+  cursor: pointer;
 }
 
 .navebar .first-row .right {
@@ -48,6 +51,9 @@ body {
   font-size: 22px;
   margin: 0 5px;
   color: #656667;
+}
+.navebar .first-row .right .log-in div {
+  color: #ccd2d2;
 }
 .navebar .second-row {
   display: flex;
@@ -73,6 +79,9 @@ body {
   margin: 0 17px;
   cursor: pointer;
   color: #1d2d25;
+  color: #ba7d66;
+  color: #c09e94;
+  color: #ccd2d2;
 }
 .navebar .second-row .menu li:hover {
   color: #ba7d66;
@@ -117,7 +126,12 @@ body {
 /* productcard */
 .productcard .new {
   background-color: rgb(246, 255, 0);
+  background-color: #ba7d66;
+  /* background-color: #c09e94; */
+
   color: black;
+  color: #ccd2d2;
+  color: white;
   height: 16px;
   width: 30px;
   /* display: inline; */

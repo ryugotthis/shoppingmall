@@ -9,12 +9,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const ProductAll = () => {
   // const [productList, setProductList] = useState(null);
-  const productList = useSelector((state) => state.productList);
+  const productList = useSelector((state) => state.product.productList);
   const [query, setQuery] = useSearchParams();
   const dispatch = useDispatch();
   const getProducts = () => {
     let searchQuery = query.get('q') || '';
     console.log('쿼리값', searchQuery);
+    // 미들웨어로 거쳐서 리듀서에 가게 됨
+    // 미들웨어로 dispatch 보내는 것
     dispatch(productAction.getProducts(searchQuery));
   };
 
