@@ -5,7 +5,7 @@ function getProducts(searchQuery) {
   // 함수반환, 항상 2개의 매개변수, getState는 현재 state를 받아볼 수 있음
   return async (dispatch, getState) => {
     // let searchQuery = query.get('q') || '';
-    let url = `https://my-json-server.typicode.com/ryugotthis/shoppingmall/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/ryugotthis/shoppingmall-toolkit/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     // setProductList(data);
@@ -16,7 +16,7 @@ function getProducts(searchQuery) {
 
 function getProductDetail(id) {
   return async (dispatch, getState) => {
-    let url = ` https://my-json-server.typicode.com/ryugotthis/shoppingmall/products/${id}`;
+    let url = ` https://my-json-server.typicode.com/ryugotthis/shoppingmall-toolkit/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log('여기여기여기여기여기', data);
