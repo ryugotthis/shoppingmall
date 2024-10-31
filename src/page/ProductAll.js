@@ -6,6 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 // 객체로 반환한건 객체형태로 받아야 함
 import { productAction } from '../redux/actions/productAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../redux/reducer/productReducer';
 
 const ProductAll = () => {
   // const [productList, setProductList] = useState(null);
@@ -17,7 +18,7 @@ const ProductAll = () => {
     console.log('쿼리값', searchQuery);
     // 미들웨어로 거쳐서 리듀서에 가게 됨
     // 미들웨어로 dispatch 보내는 것
-    dispatch(productAction.getProducts(searchQuery));
+    dispatch(fetchProducts(searchQuery));
   };
 
   // const getProducts = async () => {
